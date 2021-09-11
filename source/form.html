@@ -4,14 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 <body class="page-body">
   <header class="page-header">
     <a href="index.html" class="page-header__logo">
-      <img src="img/mishka-logo-mobile.svg" alt="логотип" width="85" height="34">
+      <picture>
+        <source media="(min-width:1200px)" srcset="img/mishka-logo-desktop.svg" width="140">
+        <source media="(min-width:768px)" srcset="img/mishka-logo-tablet.svg">
+        <img src="img/mishka-logo-mobile.svg" alt="логотип" width="85" height="34">
+      </picture>
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nac--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -34,7 +39,7 @@
       <div class="page-header__nav nav-additionally">
         <ul class="nav-additionally__list">
           <li class="nav-additionally__item">
-            <a href="catalog.html">
+            <a href="catalog.html" class="cheng">
               Каталог товаров
             </a>
           </li>
@@ -52,10 +57,12 @@
   </header>
   <main class="page-main">
     <section class="form-title">
-      <h1 class="form-title__h1">Вязание на заказ</h1>
-      <p class="form-title__p">
-        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-      </p>
+      <div class="form-title__wrapper">
+        <h1 class="form-title__h1">Вязание на заказ</h1>
+        <p class="form-title__p">
+          Мы будем рады воплотить в жизнь ваши&nbspпожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+      </div>
     </section>
     <form class="order-form" name="order-form">
       <fieldset class="order-form__radio radio-set">
@@ -153,5 +160,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js">
+  </script>
 </body>
 </html>

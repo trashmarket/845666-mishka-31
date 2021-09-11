@@ -6,11 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=b6ce5251-7695-4640-8782-8dc42e31cac5&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body class="page-body">
   <header class="page-header">
     <a href="index.html" class="page-header__logo">
-      <img src="img/mishka-logo-mobile.svg" alt="логотип" width="85" height="34">
+      <picture>
+        <source media="(min-width:1200px)" srcset="img/mishka-logo-desktop.svg" width="140">
+        <source media="(min-width:768px)" srcset="img/mishka-logo-tablet.svg">
+        <img src="img/mishka-logo-mobile.svg" alt="логотип" width="85" height="34">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nac--nojs">
       <button class="main-nav__toggle" type="button">
@@ -35,7 +40,7 @@
       <div class="page-header__nav nav-additionally">
         <ul class="nav-additionally__list">
           <li class="nav-additionally__item">
-            <a href="catalog.html">
+            <a href="catalog.html" class="cheng">
               Каталог товаров
             </a>
           </li>
@@ -62,17 +67,17 @@
             Игрушки и различные предметы ручной работы
           </h2>
           <h3 class="title-main__title">
-            Милые штуки ручной работы для дома
+            Милые штуки  ручной  работы&nbspдля дома
           </h3>
         </header>
         <dl class="title-main__subjects titles-list">
           <div class="titles-list__item">
             <dt>Предметы</dt>
-            <dl>интерьера</dl>
+            <dd>интерьера</dd>
           </div>
           <div class="titles-list__item">
             <dt>Детские</dt>
-            <dl>игрушки</dl>
+            <dd>игрушки</dd>
           </div>
         </dl>
       </div>      
@@ -83,7 +88,7 @@
       </h2>
       <div class="best-product__wrapper">
         <h3 class="best-product__h3">
-          Вязаные корзинки
+          Вязаные корзинки 
           <span>ТОВАР НЕДЕЛИ</span>
         </h3>
         <div class="best-product__content">
@@ -92,21 +97,24 @@
             </p>
             <ul class="best-product__list">
               <li class="best-product__item">
-                Цвет:
+                <span>Цвет:</span>
                 <span>«Тиффани»/серый</span>
               </li>
               <li class="best-product__item">
-                Диаметр:
+                <span>Диаметр:</span>
                 <span>25 см</span>
               </li>
               <li class="best-product__item">
-                Высота:
+                <span>Высота:</span>
                 <span>15 см</span>
               </li>
             </ul>
-          <div class="best-product__img">
-
-          </div>
+            <picture class="best-product__img" >
+              <source media="(min-width:1200px)" srcset="img/photos/triple-set-desktop.jpg">
+              <source media="(min-width:768px)" srcset="img/photos/triple-set-desktop.jpg">
+              <img src="img/photos/triple-set-mobile.jpg" alt="фото клубка из шерсти"
+              class="best-product__img" width="100%" height="315">
+            </picture>
           <div class="best-product__button-content">
             <span>Цена: 990 руб.</span>
             <button class="best-product__button" type="button">
@@ -123,36 +131,36 @@
           Коротко о нас:
         </h3>
         <ul class="advantages__list">
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--1">
             <b>
-            Экологически чистые материалы
+            Экологически чистые&nbspматериалы
             </b>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--2">
             <b>
               Связано вручную 
-              с любовью и умилением
+              с&nbspлюбовью и умилением
             </b>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--3">
             <b>
-              Скандинавский стиль по российской цене
+              Скандинавский стиль по&nbspроссийской цене
             </b>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--4">
             <b>
               Поддержка отечественного производителя
             </b>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--5">
             <b>
-              Увеличивает лайки на фотографиях
+              Увеличивает лайки на&nbspфотографиях
             </b>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--6">
             <b>
               Поставляется 
-              в подарочной упаковке
+              в&nbspподарочной упаковке
             </b>
           </li>
         </ul>
@@ -161,23 +169,51 @@
     <section class="reviews">
       <div class="reviews__wrapper">
         <h2 class="reviews__title">
-          Отзывы
+            Отзывы
           <button class="reviews__button reviews__button--top" type="button">
             Написать
           </button>
         </h2>
-        <p class="reviews__p">
-          Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-        </p>
-        <div class="reviews__content-rows">
-          <div class="reviews__person">
-            <b>Анастасия Красильникова</b>
-            <span>@misssssiskras</span>
+        <div class="reviews__containers">
+          <div class="reviews__container">
+            <p class="reviews__p">
+              Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            </p>
+            <div class="reviews__person">
+              <b>Елена Красильникова</b>
+              <span>@misssssistas3</span>
+            </div>
           </div>
-          <div class="reviews__rows">
-
+          <div class="reviews__container">
+            <p class="reviews__p">
+              Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В&nbspотчаянии,&nbspя накупила аксессуаров в Мишке, и&nbspмои&nbspфотографии сразу стали более стильными, а также набирают больше лайков!
+            </p>
+            <div class="reviews__person">
+              <b>Екатерина Красильникова</b>
+              <span>@misssssistas2</span>
+            </div>
+          </div>
+          <div class="reviews__container">
+            <p class="reviews__p">
+              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbspпопулярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            </p>
+            <div class="reviews__person">
+              <b>Анастасия Красильникова</b>
+              <span>@misssssiskras</span>
+            </div>
           </div>
         </div>
+        <div class="reviews__rows">
+          <div class="reviews__rows-left" onclick="left()">
+            <img src="img/huge-arrow-left.svg" alt="стрелка в лева" width="50" height="26">
+          </div>
+          <div class="reviews__rows-right" onclick="right()">
+            <img src="img/huge-arrow-right.svg" alt="стрелка в право" width="50" height="26">
+          </div>
+        </div>
+        <button class="reviews__button reviews__button--botom" type="button">
+          Написать
+        </button>
       </div>
     </section>
     <section class="contacts">
@@ -195,17 +231,17 @@
           <div class="contacts__address">
             <span>адрес:</span>
             <p>
-              г. Санкт-Петербургул. Большая Конюшеннаяд. 19/8, офис 101
+              г. Санкт-Петербург ул.&nbspБольшая Конюшеннаяд. 19/8, офис 101
             </p>
           </div>
         </div>
-        <div class="contacts__map">
-
-        </div>
-        <button class="contacts__button" type="button">
-          Напишите нам
-        </button>
       </div>
+      <div class="contacts__map">
+        <div id="map" style="width: 100%; height: 454px"></div>
+      </div>
+      <button class="contacts__button" type="button">
+        Напишите нам
+      </button>
     </section>
   </main>
   <footer class="page-footer">
@@ -229,5 +265,57 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [59.938635, 30.323118],
+            zoom: 15
+        }),
+
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark( myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/markerYandexmap.svg',
+            // Размеры метки.
+            iconImageSize: [66, 99]
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            
+        }),
+
+        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+            hintContent: 'Собственный значок метки с контентом',
+            balloonContent: 'А эта — новогодняя',
+            iconContent: '12'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'images/ball.png',
+            // Размеры метки.
+            iconImageSize: [48, 48],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-24, -24],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
+        
+        myMap.geoObjects.add(myPlacemark);
+        }
+</script>
 </body>
 </html>
