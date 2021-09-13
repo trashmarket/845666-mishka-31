@@ -1338,14 +1338,108 @@ fieldset {
   width: 81%;
   margin: 0 auto;
   border-top: 1px solid #63D1BB;
-  padding-top: 30px;
+  padding-top: 35px;
   font-weight: 600;
+  font-size: 17px;
+  line-height: 18px;
 }
 .order-form fieldset legend {
   color: #63D1BB;
+  width: 62px;
 }
 .radio-set__legend {
   width: 62px;
+}
+.radio-set__item {
+  margin-bottom: 24px;
+}
+.radio-set__item:last-child {
+  margin-bottom: 30px;
+}
+.radio-set__label {
+  position: relative;
+  cursor: pointer;
+  padding-right: 44px;
+  display: block;
+  padding-left: 63px;
+  width: 248px;
+}
+.radio-set__label::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid #444444;
+  left: 0;
+}
+.radio-set__label--accessory::before {
+  top: -4px;
+}
+.radio-set__label--toys::before {
+  top: -12px;
+}
+.radio-set__radio:checked + .radio-set__label::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  background-color: #63D1BB;
+  border-radius: 80%;
+}
+.radio-set__radio:checked + .radio-set__label--accessory::after {
+  top: 9px;
+  left: 12px;
+}
+.radio-set__radio:checked + .radio-set__label--toys::after {
+  left: 12px;
+}
+.checkbox-set__item {
+  margin-bottom: 36px;
+}
+.checkbox-set__label {
+  padding-left: 63px;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox-set__label::before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #444444;
+  left: 0;
+  top: -10px;
+}
+.checkbox-set__checkbox:checked + .checkbox-set__label::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 18px;
+  background-image: url("../../img/checkboxTick.svg");
+  left: 7px;
+  top: 0;
+}
+.full-name__label {
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  justify-content: space-between;
+}
+.full-name__label .full-name__input {
+  height: 52px;
+  border: none;
+  border-bottom: 2px solid #444444;
+}
+.full-name__label .full-name__input::-moz-placeholder {
+  color: #B3B3B3;
+}
+.full-name__label .full-name__input::placeholder {
+  color: #B3B3B3;
+}
+.full-name__item {
+  margin-bottom: 21px;
 }
 
 /*# sourceMappingURL=style.css.map */

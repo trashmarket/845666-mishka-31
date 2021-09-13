@@ -71,12 +71,12 @@
         </legend>
         <ul class="radio-set__list">
           <li class="radio-set__item">
-            <input type="radio" class="radio-set__radio" name="accessory" id="accessory">
-            <label for="accessory" class="radio-set__label">Аксессуар для интерьера</label>
+            <input type="radio" class="radio-set__radio visually-hidden" name="type" id="accessory">
+            <label for="accessory" class="radio-set__label radio-set__label--accessory">Аксессуар для интерьера</label>
           </li>
           <li class="radio-set__item">
-            <input type="radio" class="radio-set__radio" name="toys" id="toys">
-            <label for="toys" class="radio-set__label">Детская игрушка</label>
+            <input type="radio" class="radio-set__radio visually-hidden" name="type" id="toys">
+            <label for="toys" class="radio-set__label radio-set__label--toys">Детская игрушка</label>
           </li>
         </ul>
       </fieldset>
@@ -85,12 +85,30 @@
           ЦВЕТ
         </legend>
         <ul class="checkbox-set__list">
-          <li class="checkbox-set__item"><input type="checkbox" class="checkbox-set__checkbox" id="wite"><label for="wite" class="checkbox-set__label">Белый</label></li>
-          <li class="checkbox-set__item"><input type="checkbox" class="checkbox-set__checkbox" id="tiffany"><label for="tiffany" class="checkbox-set__label">«Тиффани»</label></li>
-          <li class="checkbox-set__item"><input type="checkbox" class="checkbox-set__checkbox" id="pink"><label for="pink" class="checkbox-set__label">Розовый</label></li>
-          <li class="checkbox-set__item"><input type="checkbox" class="checkbox-set__checkbox" id="grey"><label for="grey" class="checkbox-set__label">Серый</label></li>
-          <li class="checkbox-set__item"><input type="checkbox" class="checkbox-set__checkbox" id="black"><label for="black" class="checkbox-set__label">Черный</label></li>
-          <li class="checkbox-set__item"><input type="checkbox" class="checkbox-set__checkbox" id="orange"><label for="orange" class="checkbox-set__label">Оранжевый</label></li>
+          <li class="checkbox-set__item">
+            <input type="checkbox" class="checkbox-set__checkbox visually-hidden" checked="checked" id="wite" name="initials" >
+            <label for="wite" class="checkbox-set__label">Белый</label>
+          </li>
+          <li class="checkbox-set__item">
+            <input type="checkbox" class="checkbox-set__checkbox visually-hidden" id="tiffany" checked="checked" name="initials">
+            <label for="tiffany" class="checkbox-set__label">«Тиффани»</label>
+          </li>
+          <li class="checkbox-set__item">
+            <input type="checkbox" class="checkbox-set__checkbox visually-hidden" id="pink" name="initials">
+            <label for="pink" class="checkbox-set__label">Розовый</label>
+          </li>
+          <li class="checkbox-set__item">
+            <input type="checkbox" class="checkbox-set__checkbox visually-hidden" id="grey" name="initials">
+            <label for="grey" class="checkbox-set__label">Серый</label>
+          </li>
+          <li class="checkbox-set__item">
+            <input type="checkbox" class="checkbox-set__checkbox visually-hidden" id="black" name="initials">
+            <label for="black" class="checkbox-set__label ">Черный</label>
+          </li>
+          <li class="checkbox-set__item">
+            <input type="checkbox" class="checkbox-set__checkbox visually-hidden" id="orange" name="initials">
+            <label for="orange" class="checkbox-set__label">Оранжевый</label>
+          </li>
         </ul>
       </fieldset>
       <fieldset class="full-name">
@@ -99,19 +117,19 @@
           <li class="full-name__item">
             <label class="full-name__label">
               Имя:
-              <input type="text" class="full-name__input">
+              <input type="text" class="full-name__input" placeholder="Введите ваше имя*">
             </label>
           </li>
           <li class="full-name__item">
             <label class="full-name__label">
               Фамилия:
-              <input type="text" class="full-name__input">
+              <input type="text" class="full-name__input" placeholder="Укажите фамилию*">
             </label>
           </li>
           <li class="full-name__item">
             <label class="full-name__label">
               Отчество:
-              <input type="text" class="full-name__input">
+              <input type="text" class="full-name__input" placeholder="Отчество, если желаете">
             </label>
           </li>
         </ul>
