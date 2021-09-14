@@ -171,12 +171,13 @@ fieldset {
 }
 .site-list a {
   display: block;
-  padding: 28px 0;
+  padding: 0 0;
   color: #000;
   font-weight: 600;
   text-align: center;
   border-top: 1px solid #ECECEC;
   background-color: #fff;
+  transition: padding 0.5s, font-size 0.5s;
 }
 @media (min-width: 768px) {
   .site-list a {
@@ -201,8 +202,20 @@ fieldset {
   transform: rotate(-45deg);
 }
 @media (max-width: 767px) {
-  .main-nav--closed .site-list__item {
+  /*.main-nav--closed .site-list__item{
     display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+
+  }*/
+  .main-nav--closed .main-nav__wrapper {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 0;
   }
   .main-nav--opened .main-nav__wrapper {
     position: absolute;
@@ -1469,6 +1482,12 @@ fieldset {
   border: none;
   border-bottom: 2px solid #444444;
   outline: none;
+}
+.phone-mail__input::-moz-placeholder {
+  color: #B3B3B3;
+}
+.phone-mail__input::placeholder {
+  color: #B3B3B3;
 }
 .phone-mail__label--tell {
   width: 58px;
