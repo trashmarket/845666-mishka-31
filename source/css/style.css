@@ -1334,7 +1334,9 @@ fieldset {
 .form-title {
   margin-bottom: 37px;
 }
-.order-form fieldset {
+.order-form__radio,
+.full-name,
+.phone-mail {
   width: 81%;
   margin: 0 auto;
   border-top: 1px solid #63D1BB;
@@ -1342,8 +1344,11 @@ fieldset {
   font-weight: 600;
   font-size: 17px;
   line-height: 18px;
+  margin-bottom: 42px;
 }
-.order-form fieldset legend {
+.order-form__radio legend,
+.full-name legend,
+.phone-mail legend {
   color: #63D1BB;
   width: 62px;
 }
@@ -1431,6 +1436,7 @@ fieldset {
   height: 52px;
   border: none;
   border-bottom: 2px solid #444444;
+  outline: none;
 }
 .full-name__label .full-name__input::-moz-placeholder {
   color: #B3B3B3;
@@ -1440,6 +1446,35 @@ fieldset {
 }
 .full-name__item {
   margin-bottom: 21px;
+}
+.phone-mail {
+  padding-top: 0;
+  border: none;
+}
+.phone-mail__label {
+  display: block;
+  color: #63D1BB;
+  background-color: #fff;
+  margin-top: -8px;
+}
+.phone-mail__item {
+  height: 70px;
+  border-top: 1px solid #63D1BB;
+  margin-bottom: 30px;
+}
+.phone-mail__input {
+  height: 52px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #444444;
+  outline: none;
+}
+.phone-mail__label--tell {
+  width: 58px;
+}
+.phone-mail__label--mail {
+  width: 83px;
 }
 
 /*# sourceMappingURL=style.css.map */
