@@ -54,7 +54,7 @@ function resize () {
     hrefList[1].textContent = 'Вязание на заказ';
   }
 
-  if (widthWindow >= 768) {
+  if (widthWindow >= 740) {
     i = 0;
     for (i; i < site_items_collection.length; i++) {
       site_items_collection[i].style.padding = "32px 0 32px 87px";

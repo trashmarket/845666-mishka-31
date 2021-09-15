@@ -60,7 +60,7 @@
       <div class="form-title__wrapper">
         <h1 class="form-title__h1">Вязание на заказ</h1>
         <p class="form-title__p">
-          Мы будем рады воплотить в жизнь ваши&nbspпожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+          Мы будем рады воплотить в жизнь ваши&nbspпожелания! Заполните простую форму&nbspзаказа и мы свяжемся с вами, чтобы уточнить детали.
         </p>
       </div>
     </section>
@@ -71,7 +71,7 @@
         </legend>
         <ul class="radio-set__list">
           <li class="radio-set__item">
-            <input type="radio" class="radio-set__radio visually-hidden" name="type" id="accessory">
+            <input type="radio" class="radio-set__radio visually-hidden" name="type" id="accessory" checked="checked">
             <label for="accessory" class="radio-set__label radio-set__label--accessory">Аксессуар для интерьера</label>
           </li>
           <li class="radio-set__item">
@@ -139,10 +139,12 @@
           <li class="phone-mail__item">
             <label for="tell" class="phone-mail__label phone-mail__label--tell">ТЕЛ</label>
             <input type="text" class="phone-mail__input" id="tell" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            <img src="img/form_icons/phone.svg" alt="эконка телефона" width="25" height="24" class="phone-mail__img">
           </li>
           <li class="phone-mail__item">
             <label for="mail" class="phone-mail__label phone-mail__label--mail">E-mail</label>
             <input type="text" class="phone-mail__input" id="mail" placeholder="Ваш Email*">
+            <img src="img/form_icons/mail.svg" alt="эконка почты" class="phone-mail__img">
           </li>
         </ul>
       </fieldset>
@@ -150,7 +152,7 @@
         <legend class="additionally__legend">
           ДОП
         </legend>
-        <textarea name="additionally"  cols="30" rows="10"></textarea>
+        <textarea name="additionally"  cols="30" rows="10" class="additionally__textaria" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         <div class="additionally__submit">
           <input type="submit" class="additionally__submite">
           <span class="additionally__span">*Поля обязательны для заполнения</span>

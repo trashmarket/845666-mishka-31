@@ -1,10 +1,31 @@
 .form-title__h1 {
   padding: 73px 30px;
   text-align: center;
-  background-color: @blue-green-light;
   font-size: 27px;
   line-height: 30px;
   margin: 0;
+  background-color: @blue-green-light;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+    }
+  }
+}
+
+.form-title__wrapper {
+  @media (min-width: @tablet-width) {
+  }
 }
 
 .form-title__p {
@@ -12,6 +33,15 @@
   margin: 0;
   font-size: 13px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 87%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 54px;
+  }
 }
 
 .form-title {
@@ -20,8 +50,9 @@
 
 .order-form__radio,
 .full-name,
-.phone-mail {
-  width: 81%;
+.phone-mail,
+.additionally {
+  width: 87%;
   margin: 0 auto;
   border-top: 1px solid @blue-green-light;
   padding-top: 35px;
@@ -29,6 +60,11 @@
   font-size: 17px;
   line-height: 18px;
   margin-bottom: 42px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 
   legend {
     color: @blue-green-light;
@@ -36,12 +72,34 @@
   }
 }
 
+.radio-set__list {
+  @media (min-width: @tablet-width) {
+    width: 68%;
+    margin-left: auto;
+  }
+}
+
+.radio-set {
+  @media (min-width: @tablet-width) {
+    margin-top: 63px;
+  }
+}
+
 .radio-set__legend {
   width: 62px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 41px;
+  }
 }
 
 .radio-set__item {
   margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
 
   &:last-child {
     margin-bottom: 30px;
@@ -51,11 +109,15 @@
 .radio-set__label {
   position: relative;
   cursor: pointer;
-
   padding-right: 44px;
   display: block;
   padding-left: 63px;
   width: 248px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+    width: 100%;
+  }
 
   &::before {
     content: "";
@@ -70,6 +132,10 @@
 
 .radio-set__label--accessory::before {
   top: -4px;
+
+  @media (min-width: @tablet-width) {
+    top: -10px;
+  }
 }
 
 .radio-set__label--toys::before {
@@ -89,20 +155,52 @@
 .radio-set__radio:checked + .radio-set__label--accessory::after {
   top: 9px;
   left: 12px;
+
+  @media (min-width: @tablet-width) {
+    top: 2px;
+  } 
 }
 
 .radio-set__radio:checked + .radio-set__label--toys::after {
   left: 12px;
 }
 
+.checkbox-set {
+  @media (min-width: @tablet-width) {
+    background-color: @blue-green-light;
+  }
+}
+
+.checkbox-set__legend {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 48px;
+  }
+}
+
+.checkbox-set__list {
+  @media (min-width: @tablet-width) {
+    width: 67%;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .checkbox-set__item {
   margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    width: 164px;
+  }
 }
 
 .checkbox-set__label {
   padding-left: 63px;
   position: relative;
   cursor: pointer;
+
+
 
   &::before {
     content: "";
@@ -163,6 +261,7 @@
   height: 70px;
   border-top: 1px solid @blue-green-light;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .phone-mail__input {
@@ -184,4 +283,46 @@
 
 .phone-mail__label--mail {
   width: 83px;
+}
+
+.phone-mail__img, .phone-mail__img {
+  position: absolute;
+  right: 0;
+  top: 24px;
+}
+
+.additionally__textaria {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 2px solid #444444;
+  padding: 17px;
+  height: 142px;
+  &::placeholder {
+    color: #B3B3B3;
+  }
+}
+
+.additionally__submit {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 17px;
+  justify-content: space-between;
+}
+
+.additionally__span {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.additionally__submite {
+  outline: none;
+  background-color: #fff;
+  border: 2px solid #444444;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 18px 0;
+  margin-bottom: 35px;
 }
