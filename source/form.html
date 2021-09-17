@@ -111,7 +111,7 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="full-name">
+      <fieldset class="full-name full-name--minus">
         <legend class="full-name__surname-name">ФИО</legend>
         <ul class="full-name__list">
           <li class="full-name__item">
@@ -134,7 +134,13 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="phone-mail">
+      <fieldset class="phone-mail phone-mail--corect">
+        <span class="phone-mail__label-span phone-mail__label-span--tel">
+          ТЕЛ
+        </span>
+        <span class="phone-mail__label-span phone-mail__label-span--email">
+          E-mail
+        </span>
         <ul class="phone-mail__list">
           <li class="phone-mail__item">
             <label for="tell" class="phone-mail__label phone-mail__label--tell">ТЕЛ</label>
@@ -148,12 +154,12 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="additionally">
+      <fieldset class="additionally additionally--correct">
         <legend class="additionally__legend">
           ДОП
         </legend>
         <textarea name="additionally"  cols="30" rows="10" class="additionally__textaria" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-        <div class="additionally__submit">
+        <div class="additionally__submite-container">
           <input type="submit" class="additionally__submite">
           <span class="additionally__span">*Поля обязательны для заполнения</span>
         </div>

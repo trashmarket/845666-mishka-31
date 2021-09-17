@@ -3,7 +3,7 @@ const toggle = document.querySelector('.main-nav__toggle');
 const site_items_collection = document.querySelectorAll(".site-list__item a");
 console.log(site_items_collection);
 
-
+let i = 0;
 
 main.classList.remove('main-nac--nojs');
 
@@ -49,18 +49,30 @@ function resize () {
   if (widthWindow >= 1200) {
     hrefList[0].textContent = 'Новые поступления';
     hrefList[1].textContent = 'Распродажа';
+
+    
+    for (let i = 0; i < site_items_collection.length; i++) {
+      if (i == 0) {
+        site_items_collection[i].style.padding = "32px 36px 32px 0";
+      }
+      if ( i == 1) {
+        site_items_collection[i].style.padding = "32px 0 32px 35px";
+      }
+    }
+
   } else {
     hrefList[0].textContent = 'Каталог товаров';
     hrefList[1].textContent = 'Вязание на заказ';
   }
 
-  if (widthWindow >= 740) {
+  if (widthWindow >= 740 && widthWindow < 1100) {
     i = 0;
     for (i; i < site_items_collection.length; i++) {
       site_items_collection[i].style.padding = "32px 0 32px 87px";
     }
-  } else {
-    console.log('hellori=s');
+  } 
+  if (widthWindow < 740 ) {
+    
     i = 0;
     for (i; i < site_items_collection.length; i++) {
       site_items_collection[i].style.padding = "0";
