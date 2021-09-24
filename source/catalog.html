@@ -10,9 +10,13 @@
 <body class="page-body">
   <header class="page-header">
     <a href="index.html" class="page-header__logo">
-      <img src="img/mishka-logo-mobile.svg" alt="логотип" width="85" height="34">
+      <picture>
+        <source media="(min-width:1200px)" srcset="img/mishka-logo-desktop.svg" width="140">
+        <source media="(min-width:768px)" srcset="img/mishka-logo-tablet.svg">
+        <img src="img/mishka-logo-mobile.svg" alt="логотип" width="85" height="34">
+      </picture>
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nac--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -35,7 +39,7 @@
       <div class="page-header__nav nav-additionally">
         <ul class="nav-additionally__list">
           <li class="nav-additionally__item">
-            <a href="catalog.html">
+            <a href="catalog.html" class="cheng">
               Каталог товаров
             </a>
           </li>
@@ -58,71 +62,98 @@
       </h1>
     </section>
     <section class="goods">
-      <ul class="goods__list">
-        <li class="goods__item">
-          <div class="goods__img"></div>
-          <div class="goods__info">
-            <div class="goods__info-container">
-              <h3 class="goods__h3">
-                Зайчик-попрыгайчик
-              </h3>
-              <span class="goods__span">
-                Рост 30 см, вес 200 г
-              </span>
+      <div class="goods__wrapper">
+        <ul class="goods__list">
+          <li class="goods__item">
+            <div class="goods__img-container">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/catalogImages/photo-1-desktop.jpg" width="316" height="462">
+                <source media="(min-width:768px)" srcset="img/catalogImages/rabite-tablet.jpg" width="334" height="334">
+                <img src="img/catalogImages/rabite-mobile .jpg" width="260" height="195" alt="заяц" class="goods__img">
+              </picture>
             </div>
-            <div class="goods__price">
-              <b>1 200 руб.</b>
-              <img src="#" alt="">
+            <div class="goods__info-wrapper">
+              <div class="goods__info-container">
+                <h3 class="goods__h3">
+                  Зайчик-попрыгайчик
+                </h3>
+                <span class="goods__span">
+                  Рост 30 см, вес 200 г
+                </span>
+              </div>
+              <div class="goods__price">
+                <b>1 200 руб.</b>
+                <img src="img/catalogImages/cart.svg" alt="svg element" width="20" height="19">
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="goods__item">
-          <div class="goods__img"></div>
-          <div class="goods__info">
-            <div class="goods__info-container">
-              <h3 class="goods__h3">
-                Корзинка для белья
-              </h3>
-              <span class="goods__span">
-                Диаметр 15 см, высота 10 см
-              </span>
+          </li>
+          <li class="goods__item">
+            <div class="goods__img-container">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/catalogImages/photo-2-desktop.jpg" width="316" height="462">
+                <source media="(min-width:768px)" srcset="img/catalogImages/bowl-tablet.jpg" width="334" height="334">
+                <img src="img/catalogImages/bowl-mobile.jpg" alt="тарелка" width="260" height="195" class="goods__img">
+              </picture>
             </div>
-            <div class="goods__price">
-              <b>690 руб.</b>
-              <img src="#" alt="">
+            <div class="goods__info-wrapper">
+              <div class="goods__info-container">
+                <h3 class="goods__h3">
+                  Корзинка для белья
+                </h3>
+                <span class="goods__span">
+                  Диаметр 15 см, высота 10 см
+                </span>
+              </div>
+              <div class="goods__price">
+                <b>690 руб.</b>
+                <img src="img/catalogImages/cart.svg" alt="svg element" width="20" height="19">
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="goods__item">
-          <div class="goods__img"></div>
-          <div class="goods__info">
-            <div class="goods__info-container">
-              <h3 class="goods__h3">
-                Большая корзинка для игрушек
-              </h3>
-              <span class="goods__span">
-                Рост 30 см, вес 200 г
-              </span>
+          </li>
+          <li class="goods__item">
+            <div class="goods__img-container">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/catalogImages/photo-3-desktop.jpg" width="316" height="462">
+                <source media="(min-width:768px)" srcset="img/catalogImages/toys-tablet.jpg" width="334" height="334">
+                <img src="img/catalogImages/bowl-mobile.jpg" alt="игрушки" width="260" height="195" class="goods__img">
+              </picture>
             </div>
-            <div class="goods__price">
-              <b>1 500 руб.</b>
-              <img src="#" alt="">
+            <div class="goods__info-wrapper">
+              <div class="goods__info-container">
+                <h3 class="goods__h3">
+                  Большая корзинка для игрушек
+                </h3>
+                <span class="goods__span">
+                  Рост 30 см, вес 200 г
+                </span>
+              </div>
+              <div class="goods__price">
+                <b>1 500 руб.</b>
+                <img src="img/catalogImages/cart.svg" alt="svg element" width="20" height="19">
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="video">
-      <div class="video__yt"></div>
-      <div class="video__info">
-        <h2 class="video__h2">Процесс производства</h2>
+      <div class="video__wrapper">
+        <div class="video__yt">
+          <iframe width="260" height="150" src="https://www.youtube.com/embed/6x_SShciNyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video__h2-container">
+          <h2 class="video__h2"> Процесс производства </h2>
+          <img src="img/catalogImages/camera-icon.svg" alt="камера иконка" width="32" height="22" class="video__img">
+        </div>
         <p class="video__p">
-          По просьбам наших любимых фолловеров мы сняли для вас подробное видео 
-          о том, как появляются наши товары.
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео 
+            о том, как появляются наши товары. 
         </p>
-        <button class="video__button">
-          Сделать заказ
-        </button>
+        <div class="video__button-container">
+          <button class="video__button">
+            Сделать заказ
+          </button>
+        </div>
       </div>
     </section>
     <footer class="page-footer">

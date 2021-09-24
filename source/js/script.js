@@ -13,13 +13,12 @@ main.addEventListener('click', function (event) {
       main.classList.remove("main-nav--closed");
       main.classList.add("main-nav--opened");
 
-       i = 0;
+      i = 0;
       for (i; i < site_items_collection.length; i++) {
         site_items_collection[i].style.padding = "26px 0";
       }
-    }
-    else {
-       i = 0;
+    } else {
+      i = 0;
       for (i; i < site_items_collection.length; i++) {
         site_items_collection[i].style.padding = "0px 0";
       }
@@ -43,19 +42,19 @@ if (widthWindow >= 1200) {
   hrefList[1].textContent = 'Вязание на заказ';
 }
 
-function resize () {
-   widthWindow = document.documentElement.clientWidth;
+function resize() {
+  widthWindow = document.documentElement.clientWidth;
 
   if (widthWindow >= 1200) {
     hrefList[0].textContent = 'Новые поступления';
     hrefList[1].textContent = 'Распродажа';
 
-    
+
     for (let i = 0; i < site_items_collection.length; i++) {
       if (i == 0) {
         site_items_collection[i].style.padding = "32px 36px 32px 0";
       }
-      if ( i == 1) {
+      if (i == 1) {
         site_items_collection[i].style.padding = "32px 0 32px 35px";
       }
     }
@@ -70,9 +69,9 @@ function resize () {
     for (i; i < site_items_collection.length; i++) {
       site_items_collection[i].style.padding = "32px 0 32px 87px";
     }
-  } 
-  if (widthWindow < 740 ) {
-    
+  }
+  if (widthWindow < 740) {
+
     i = 0;
     for (i; i < site_items_collection.length; i++) {
       site_items_collection[i].style.padding = "0";
